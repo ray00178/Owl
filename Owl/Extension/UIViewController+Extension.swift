@@ -21,7 +21,10 @@ extension UIViewController {
                         style: UIModalPresentationStyle,
                         animated: Bool,
                         completion: (() -> Swift.Void)?) {
-        vc.modalPresentationStyle = style
+        if (vc is UIAlertController) == false {
+            vc.modalPresentationStyle = style
+        }
+        
         present(vc, animated: animated, completion: completion)
     }
     

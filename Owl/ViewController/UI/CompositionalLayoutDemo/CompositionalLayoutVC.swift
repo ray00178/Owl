@@ -221,35 +221,35 @@ class CompositionalLayoutVC: AppBaseVC {
     private func setup() {
         navigationItem.title = page?.title
         
-        let barChange = UIBarButtonItem(title: "Change",
-                                        style: .plain,
-                                        target: self,
-                                        action: nil)
-        navigationItem.rightBarButtonItem = barChange
-        
         if #available(iOS 14.0, *) {
-            barChange.menu = UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [
-                UIAction(title: "CompositionalLayout1", handler: { [weak self] (action) in
-                    guard let strongSelf = self else { return }
-                    
-                    strongSelf.collectionView.setCollectionViewLayout(strongSelf.compositionalLayout1,
-                                                                      animated: false)
-                }),
-                UIAction(title: "CompositionalLayout2", handler: { [weak self] (action) in
-                    guard let strongSelf = self else { return }
-                    
-                    strongSelf.collectionView.setCollectionViewLayout(strongSelf.compositionalLayout2,
-                                                                      animated: false)
-                }),
-                UIAction(title: "CompositionalLayout3", handler: { [weak self] (action) in
-                    guard let strongSelf = self else { return }
-                    
-                    strongSelf.collectionView.setCollectionViewLayout(strongSelf.compositionalLayout3,
-                                                                      animated: false)
-                })
-            ])
-        } else {
-            // do nothing...
+            let barChange = UIBarButtonItem(title: "Menu",
+                                            style: .plain,
+                                            target: self,
+                                            action: nil)
+            navigationItem.rightBarButtonItem = barChange
+            
+            barChange.menu = UIMenu(
+                title: "",
+                image: nil,
+                identifier: nil,
+                options: .displayInline,
+                children: [
+                    UIAction(title: "Copy",
+                             image: UIImage(systemName: "doc.on.doc"),
+                             handler: { [weak self] (action) in
+                                self?.handleMenu(action)
+                             }),
+                    UIAction(title: "Share",
+                             image: UIImage(systemName: "square.and.arrow.up"),
+                             handler: { [weak self] (action) in
+                                self?.handleMenu(action)
+                             }),
+                    UIAction(title: "Edit",
+                             image: UIImage(systemName: "pencil.circle"),
+                             handler: { [weak self] (action) in
+                                self?.handleMenu(action)
+                             })
+                ])
         }
         
         view.addSubview(collectionView)
@@ -281,8 +281,26 @@ class CompositionalLayoutVC: AppBaseVC {
         collectionView.reloadData()
     }
     
-    @objc private func changeLayout(_ barButton: UIBarButtonItem) {
+    @available(iOS 13.0, *)
+    @objc private func handleMenu(_ action: UIAction) {
+        switch action.title {
+        case "Copy":
+            Log.debug(message: "Debug handleMenu at copy", category: .other)
+        case "Share":
+            Log.info(message: "Info handleMenu at copy", category: .other)
+        case "Edit":
+            Log.error(message: "Error handleMenu at copy", category: .other)
+        default:
+            break
+        }
         
+        let ac = UIAlertController(title: "點擊 \(action.title) Item", message: nil, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "我知道了", style: .default, handler: nil))
+        
+        // Tint Color
+        ac.view.tintColor = .owlMain
+        
+        present(to: ac, style: .overFullScreen, animated: true, completion: nil)
     }
 }
 

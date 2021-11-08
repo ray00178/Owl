@@ -121,6 +121,11 @@ extension AppContainerVC: UITableViewDataSource, UITableViewDelegate {
             vc.page = page
             setCustomNavigationItemBack(title: appTab?.title)
             push(to: vc, animated: true)
+        case .cropImage:
+            let vc = CropImageDemoVC(nibName: "CropImageDemoVC", bundle: nil)
+            vc.page = page
+            setCustomNavigationItemBack(title: appTab?.title)
+            push(to: vc, animated: true)
         default:
             break
         }
