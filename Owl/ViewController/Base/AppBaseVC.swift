@@ -9,6 +9,8 @@ import UIKit
 
 class AppBaseVC: UIViewController {
     
+    var page: AppContainerVC.Page?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()

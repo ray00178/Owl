@@ -39,9 +39,7 @@ class FontAndAnimationDemoVC: AppBaseVC {
         label.font = .system_medium_16
         return label
     }()
-    
-    var page: AppContainerVC.Page?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()

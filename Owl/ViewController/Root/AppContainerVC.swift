@@ -45,7 +45,7 @@ class AppContainerVC: AppBaseVC {
             dataset = [.collectionViewLayout, .compositionalLayout, .fontAndAnimation,
                        .cropImage, .saveImage, .qrCode, .tabSwipe]
         case .network:
-            break
+            dataset = [.apiDemo1]
         case .other:
             break
         case .setting:
@@ -125,6 +125,11 @@ extension AppContainerVC: UITableViewDataSource, UITableViewDelegate {
             let vc = CropImageDemoVC(nibName: "CropImageDemoVC", bundle: nil)
             vc.page = page
             setCustomNavigationItemBack(title: appTab?.title)
+            push(to: vc, animated: true)
+        case .apiDemo1:
+            let vc = ApiDemo1VC()
+            vc.page = page
+            setCustomNavigationItemBack(title: "")
             push(to: vc, animated: true)
         default:
             break
@@ -265,6 +270,8 @@ extension AppContainerVC {
         
         case tabSwipe
         
+        case apiDemo1
+        
         var title: String? {
             switch self {
             case .collectionViewLayout:
@@ -281,6 +288,8 @@ extension AppContainerVC {
                 return "QRCode Scan"
             case .tabSwipe:
                 return "Tap Swipe with scroll view"
+            case .apiDemo1:
+                return "Api Demo 1"
             }
         }
         
@@ -290,6 +299,8 @@ extension AppContainerVC {
                  .cropImage, .saveImage, .qrCode,
                  .tabSwipe:
                 return UIImage(named: "ic-ui-full")
+            case .apiDemo1:
+                return UIImage(named: "ic-network-full")
             }
         }
     }

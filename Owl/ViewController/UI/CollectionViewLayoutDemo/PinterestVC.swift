@@ -30,8 +30,6 @@ class PinterestVC: AppBaseVC {
     
     private var dataset: [Pinterest] = []
     
-    var page: AppContainerVC.Page?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()

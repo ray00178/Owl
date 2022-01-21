@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB3282232772C64800AC91AF /* AppURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3282222772C64800AC91AF /* AppURLSession.swift */; };
+		EB3282252772F33600AC91AF /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3282242772F33600AC91AF /* ApiRequest.swift */; };
+		EB3282272772F4E800AC91AF /* ApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3282262772F4E800AC91AF /* ApiPath.swift */; };
+		EB3282292772F7AB00AC91AF /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3282282772F7AB00AC91AF /* Dictionary+Extension.swift */; };
 		EB67C39D27321AB60088A134 /* CompositionalLayoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB67C39C27321AB60088A134 /* CompositionalLayoutVC.swift */; };
 		EB67C3A92732899E0088A134 /* mobile01-14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB67C39E2732899D0088A134 /* mobile01-14.jpg */; };
 		EB67C3AA2732899E0088A134 /* mobile01-11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB67C39F2732899D0088A134 /* mobile01-11.jpg */; };
@@ -67,6 +71,7 @@
 		EBF615842703F885006216A4 /* Comfortaa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBF6157F2703F885006216A4 /* Comfortaa-Light.ttf */; };
 		EBF615852703F885006216A4 /* Comfortaa-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBF615802703F885006216A4 /* Comfortaa-SemiBold.ttf */; };
 		EBF6158727040939006216A4 /* UIAnimationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF6158627040939006216A4 /* UIAnimationLabel.swift */; };
+		EBFE9B3A277421ED0088B5B7 /* ApiDemo1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE9B39277421ED0088B5B7 /* ApiDemo1VC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +92,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB3282222772C64800AC91AF /* AppURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppURLSession.swift; sourceTree = "<group>"; };
+		EB3282242772F33600AC91AF /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
+		EB3282262772F4E800AC91AF /* ApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPath.swift; sourceTree = "<group>"; };
+		EB3282282772F7AB00AC91AF /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		EB67C39C27321AB60088A134 /* CompositionalLayoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutVC.swift; sourceTree = "<group>"; };
 		EB67C39E2732899D0088A134 /* mobile01-14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mobile01-14.jpg"; sourceTree = "<group>"; };
 		EB67C39F2732899D0088A134 /* mobile01-11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mobile01-11.jpg"; sourceTree = "<group>"; };
@@ -153,6 +162,7 @@
 		EBF6157F2703F885006216A4 /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Light.ttf"; sourceTree = "<group>"; };
 		EBF615802703F885006216A4 /* Comfortaa-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-SemiBold.ttf"; sourceTree = "<group>"; };
 		EBF6158627040939006216A4 /* UIAnimationLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAnimationLabel.swift; sourceTree = "<group>"; };
+		EBFE9B39277421ED0088B5B7 /* ApiDemo1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDemo1VC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +190,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB3282212772C44F00AC91AF /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				EB3282222772C64800AC91AF /* AppURLSession.swift */,
+				EB3282242772F33600AC91AF /* ApiRequest.swift */,
+				EB3282262772F4E800AC91AF /* ApiPath.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 		EB67C39B27321A8E0088A134 /* CompositionalLayoutDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +260,7 @@
 		EB858B2426E8B36C0073EAF8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				EBFE9B38277421D40088B5B7 /* ApiDemo1 */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -267,6 +288,7 @@
 		EB874DEB26E205DA00FE2172 /* Owl */ = {
 			isa = PBXGroup;
 			children = (
+				EB3282212772C44F00AC91AF /* Api */,
 				EBA38DDE2702C3AD008DCE93 /* Resources */,
 				EBF6158827040D5E006216A4 /* Helper */,
 				EBA38DDD2702C382008DCE93 /* Widget */,
@@ -314,6 +336,7 @@
 				EBA38DF42702C705008DCE93 /* Bundle+Extension.swift */,
 				EB73C2ED2738C03E00B0E1DA /* UIScreen+Extension.swift */,
 				EB73C2EF2738C0B800B0E1DA /* UIImage+Extension.swift */,
+				EB3282282772F7AB00AC91AF /* Dictionary+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -418,6 +441,14 @@
 				EB73C2F32738D20B00B0E1DA /* Log.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		EBFE9B38277421D40088B5B7 /* ApiDemo1 */ = {
+			isa = PBXGroup;
+			children = (
+				EBFE9B39277421ED0088B5B7 /* ApiDemo1VC.swift */,
+			);
+			path = ApiDemo1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -587,13 +618,18 @@
 				EB73C2EB2738BFFF00B0E1DA /* CropImageDemoVC.swift in Sources */,
 				EB858B1926E89EAE0073EAF8 /* AppBaseVC.swift in Sources */,
 				EB858B1E26E8A1ED0073EAF8 /* UIView+Extension.swift in Sources */,
+				EB3282292772F7AB00AC91AF /* Dictionary+Extension.swift in Sources */,
+				EB3282272772F4E800AC91AF /* ApiPath.swift in Sources */,
 				EBB9B69626F1F959004CAB33 /* UIViewController+Extension.swift in Sources */,
 				EBB9B69026F1EAD1004CAB33 /* Array+Extension.swift in Sources */,
+				EB3282252772F33600AC91AF /* ApiRequest.swift in Sources */,
 				EBB9B69226F1F449004CAB33 /* PinterestVC.swift in Sources */,
 				EB858B1426E892830073EAF8 /* AppTabBarController.swift in Sources */,
 				EB874DEF26E205DA00FE2172 /* SceneDelegate.swift in Sources */,
+				EB3282232772C64800AC91AF /* AppURLSession.swift in Sources */,
 				EB874E1E26E2080200FE2172 /* UIColor+Extension.swift in Sources */,
 				EB858B2026E8AB630073EAF8 /* AppManager.swift in Sources */,
+				EBFE9B3A277421ED0088B5B7 /* ApiDemo1VC.swift in Sources */,
 				EB858B2226E8B2680073EAF8 /* UITableView+Extension.swift in Sources */,
 				EBB9B69426F1F460004CAB33 /* PinterestLayout.swift in Sources */,
 				EB73C2F02738C0B800B0E1DA /* UIImage+Extension.swift in Sources */,
@@ -788,6 +824,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tw.animal.Owl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -808,6 +845,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tw.animal.Owl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

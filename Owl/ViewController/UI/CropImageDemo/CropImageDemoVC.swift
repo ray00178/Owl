@@ -22,9 +22,7 @@ class CropImageDemoVC: AppBaseVC {
     @IBOutlet weak var cropButton: UIButton!
     
     private let scale = UIScreen.density
-    
-    var page: AppContainerVC.Page?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
