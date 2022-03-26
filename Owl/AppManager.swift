@@ -13,7 +13,7 @@ struct AppManager {
     
     private init() {}
 
-    public func createRootFor12Earlier(window: UIWindow?) {
+    public func createRootVCFor12Earlier(window: UIWindow?) {
         let appTabBarController = AppTabBarController()
         let appTabs: [AppTab] = [.ui, .network, .other, .setting]
         var vcs: [UIViewController] = []
@@ -39,7 +39,7 @@ struct AppManager {
     }
     
     @available(iOS 13.0, *)
-    public func createRootFor13Later(window: UIWindow?, windowScene: UIWindowScene) {
+    public func createRootVCFor13Later(window: UIWindow?, windowScene: UIWindowScene) {
         let appTabBarController = AppTabBarController()
         let appTabs: [AppTab] = [.ui, .network, .other, .setting]
         var vcs: [UIViewController] = []

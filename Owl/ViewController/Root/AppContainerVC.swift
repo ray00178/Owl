@@ -43,7 +43,7 @@ class AppContainerVC: AppBaseVC {
         switch appTab {
         case .ui:
             dataset = [.collectionViewLayout, .compositionalLayout, .fontAndAnimation,
-                       .cropImage, .saveImage, .qrCode, .tabSwipe]
+                       .cropImage, .qrCode, .tabSwipe]
         case .network:
             dataset = [.apiDemo1]
         case .other:
@@ -130,6 +130,11 @@ extension AppContainerVC: UITableViewDataSource, UITableViewDelegate {
             let vc = ApiDemo1VC()
             vc.page = page
             setCustomNavigationItemBack(title: "")
+            push(to: vc, animated: true)
+        case .imageLoader:
+            let vc = ImageLoaderDemoVC()
+            vc.page = page
+            setCustomNavigationItemBack(title: appTab?.title)
             push(to: vc, animated: true)
         default:
             break
@@ -263,14 +268,14 @@ extension AppContainerVC {
         case fontAndAnimation
         
         case cropImage
-        
-        case saveImage
-        
+                
         case qrCode
         
         case tabSwipe
         
         case apiDemo1
+        
+        case imageLoader
         
         var title: String? {
             switch self {
@@ -282,24 +287,24 @@ extension AppContainerVC {
                 return "Font Style, Animation Number"
             case .cropImage:
                 return "Crop Image"
-            case .saveImage:
-                return "Save Image in local"
             case .qrCode:
                 return "QRCode Scan"
             case .tabSwipe:
                 return "Tap Swipe with scroll view"
             case .apiDemo1:
                 return "Api Demo 1"
+            case .imageLoader:
+                return "Image Loader"
             }
         }
         
         var icon: UIImage? {
             switch self {
             case .collectionViewLayout, .compositionalLayout, .fontAndAnimation,
-                 .cropImage, .saveImage, .qrCode,
+                 .cropImage, .qrCode,
                  .tabSwipe:
                 return UIImage(named: "ic-ui-full")
-            case .apiDemo1:
+            case .apiDemo1, .imageLoader:
                 return UIImage(named: "ic-network-full")
             }
         }

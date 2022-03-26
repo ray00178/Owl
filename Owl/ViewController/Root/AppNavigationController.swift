@@ -15,16 +15,35 @@ class AppNavigationController: UINavigationController {
     }
     
     private func setup() {
-        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.owlMain]
-        navigationBar.titleTextAttributes = textAttributes
-        navigationBar.barTintColor = .owlBackground
-        navigationBar.tintColor = .owlMain
-        
-        // 是否要有半透明遮罩
-        navigationBar.isTranslucent = true
-        
-        // 隱藏下方黑色底線
-        navigationBar.shadowImage = UIImage()
+        if #available(iOS 13.0, *) {
+            let appearance = UINavigationBarAppearance()
+            
+            // 設定順序
+            // 1. configureWithTransparentBackground()
+            // 2. titleTextAttributes and backgroundColor
+            // 如果1與2顛倒, 會變成透明的NavagitionBar
+            
+            // 底部線條會不見
+            appearance.configureWithTransparentBackground()
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.owlMain]
+            appearance.backgroundColor = .owlBackground
+            navigationBar.standardAppearance = appearance
+            navigationBar.scrollEdgeAppearance = appearance
+            
+            navigationBar.isTranslucent = true
+            navigationBar.tintColor = .owlMain
+        } else {
+            let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.owlMain]
+            navigationBar.titleTextAttributes = textAttributes
+            navigationBar.barTintColor = .owlBackground
+            navigationBar.tintColor = .owlMain
+            
+            // 是否要有半透明遮罩
+            navigationBar.isTranslucent = true
+            
+            // 隱藏下方黑色底線
+            navigationBar.shadowImage = UIImage()
+        }
     }
     
     /// 全螢幕左滑退出

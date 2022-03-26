@@ -20,6 +20,15 @@ class AppTabBarController: UITabBarController {
         tabBar.tintColor = .owlMain
         tabBar.unselectedItemTintColor = .owlMain
         
+        if #available(iOS 15.0, *) {
+            let appearance = UITabBarAppearance()
+            appearance.configureWithDefaultBackground()
+            appearance.backgroundColor = .owlBackground
+            
+            tabBar.standardAppearance = appearance
+            tabBar.scrollEdgeAppearance = appearance
+        }
+        
         delegate = self
     }
 }

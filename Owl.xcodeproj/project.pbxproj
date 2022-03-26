@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		711CD45E27EF679800D0837A /* ImageLoaderDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711CD45D27EF679800D0837A /* ImageLoaderDemoVC.swift */; };
 		EB3282232772C64800AC91AF /* AppURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3282222772C64800AC91AF /* AppURLSession.swift */; };
 		EB3282252772F33600AC91AF /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3282242772F33600AC91AF /* ApiRequest.swift */; };
 		EB3282272772F4E800AC91AF /* ApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3282262772F4E800AC91AF /* ApiPath.swift */; };
@@ -92,6 +93,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		711CD45D27EF679800D0837A /* ImageLoaderDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderDemoVC.swift; sourceTree = "<group>"; };
 		EB3282222772C64800AC91AF /* AppURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppURLSession.swift; sourceTree = "<group>"; };
 		EB3282242772F33600AC91AF /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		EB3282262772F4E800AC91AF /* ApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPath.swift; sourceTree = "<group>"; };
@@ -190,6 +192,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		711CD45C27EF66DC00D0837A /* ImageLoaderDemo */ = {
+			isa = PBXGroup;
+			children = (
+				711CD45D27EF679800D0837A /* ImageLoaderDemoVC.swift */,
+				711CD45F27EF689900D0837A /* Cell */,
+			);
+			path = ImageLoaderDemo;
+			sourceTree = "<group>";
+		};
+		711CD45F27EF689900D0837A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		EB3282212772C44F00AC91AF /* Api */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				EBFE9B38277421D40088B5B7 /* ApiDemo1 */,
+				711CD45C27EF66DC00D0837A /* ImageLoaderDemo */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -637,6 +656,7 @@
 				EBA38DDB2702C1C1008DCE93 /* PinterestCell.swift in Sources */,
 				EB858B1626E89C980073EAF8 /* AppNavigationController.swift in Sources */,
 				EB858B1C26E89FF50073EAF8 /* AppContainerVC.swift in Sources */,
+				711CD45E27EF679800D0837A /* ImageLoaderDemoVC.swift in Sources */,
 				EBB9B68D26F1E68A004CAB33 /* UIFont+Extension.swift in Sources */,
 				EB73C2F22738C47900B0E1DA /* AttributedStringBuilder.swift in Sources */,
 				EB67C39D27321AB60088A134 /* CompositionalLayoutVC.swift in Sources */,

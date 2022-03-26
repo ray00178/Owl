@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         guard #available(iOS 13.0, *) else {
             window = UIWindow(frame: UIScreen.main.bounds)
-            AppManager.share.createRootFor12Earlier(window: window)
+            AppManager.share.createRootVCFor12Earlier(window: window)
             
             print("AppDelegate didFinishLaunchingWithOptions for iOS 12 before")
             return true
