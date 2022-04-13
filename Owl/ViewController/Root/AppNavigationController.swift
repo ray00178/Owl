@@ -17,21 +17,15 @@ class AppNavigationController: UINavigationController {
     private func setup() {
         if #available(iOS 13.0, *) {
             let appearance = UINavigationBarAppearance()
-            
-            // 設定順序
-            // 1. configureWithTransparentBackground()
-            // 2. titleTextAttributes and backgroundColor
-            // 如果1與2顛倒, 會變成透明的NavagitionBar
-            
-            // 底部線條會不見
-            appearance.configureWithTransparentBackground()
-            appearance.titleTextAttributes = [.foregroundColor: UIColor.owlMain]
+            appearance.configureWithDefaultBackground()
             appearance.backgroundColor = .owlBackground
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.owlMain]
+            
             navigationBar.standardAppearance = appearance
             navigationBar.scrollEdgeAppearance = appearance
             
-            navigationBar.isTranslucent = true
             navigationBar.tintColor = .owlMain
+            navigationBar.isTranslucent = true
         } else {
             let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.owlMain]
             navigationBar.titleTextAttributes = textAttributes

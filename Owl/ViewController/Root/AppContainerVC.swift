@@ -105,7 +105,7 @@ extension AppContainerVC: UITableViewDataSource, UITableViewDelegate {
         case .collectionViewLayout:
             let vc = PinterestVC()
             vc.page = page
-            setCustomNavigationItemBack(title: "")
+            setCustomNavigationItemBack(title: nil)
             push(to: vc, animated: true)
         case .compositionalLayout:
             if #available(iOS 13.0, *) {
@@ -126,15 +126,15 @@ extension AppContainerVC: UITableViewDataSource, UITableViewDelegate {
             vc.page = page
             setCustomNavigationItemBack(title: appTab?.title)
             push(to: vc, animated: true)
+        case .qrCode:
+            let vc = QRCodeDemoVC()
+            vc.page = page
+            setCustomNavigationItemBack(title: nil)
+            push(to: vc, animated: true)
         case .apiDemo1:
             let vc = ApiDemo1VC()
             vc.page = page
             setCustomNavigationItemBack(title: "")
-            push(to: vc, animated: true)
-        case .imageLoader:
-            let vc = ImageLoaderDemoVC()
-            vc.page = page
-            setCustomNavigationItemBack(title: appTab?.title)
             push(to: vc, animated: true)
         default:
             break
@@ -268,14 +268,12 @@ extension AppContainerVC {
         case fontAndAnimation
         
         case cropImage
-                
+        
         case qrCode
         
         case tabSwipe
         
         case apiDemo1
-        
-        case imageLoader
         
         var title: String? {
             switch self {
@@ -293,8 +291,6 @@ extension AppContainerVC {
                 return "Tap Swipe with scroll view"
             case .apiDemo1:
                 return "Api Demo 1"
-            case .imageLoader:
-                return "Image Loader"
             }
         }
         
@@ -304,7 +300,7 @@ extension AppContainerVC {
                  .cropImage, .qrCode,
                  .tabSwipe:
                 return UIImage(named: "ic-ui-full")
-            case .apiDemo1, .imageLoader:
+            case .apiDemo1:
                 return UIImage(named: "ic-network-full")
             }
         }

@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-        AppManager.share.createRootVCFor13Later(window: window, windowScene: windowScene)
+        AppManager.share.createRootFor13Later(window: window, windowScene: windowScene)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

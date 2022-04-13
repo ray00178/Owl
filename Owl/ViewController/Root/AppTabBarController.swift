@@ -16,7 +16,6 @@ class AppTabBarController: UITabBarController {
     
     private func setup() {
         tabBar.isTranslucent = false
-        tabBar.barTintColor = .owlBackground
         tabBar.tintColor = .owlMain
         tabBar.unselectedItemTintColor = .owlMain
         
@@ -27,6 +26,8 @@ class AppTabBarController: UITabBarController {
             
             tabBar.standardAppearance = appearance
             tabBar.scrollEdgeAppearance = appearance
+        } else {
+            tabBar.barTintColor = .owlBackground
         }
         
         delegate = self

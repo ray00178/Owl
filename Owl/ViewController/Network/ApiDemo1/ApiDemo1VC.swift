@@ -224,7 +224,8 @@ extension ApiDemo1VC {
             var req1 = ApiRequest()
             req1.path = .custom(path: "https://assets.juksy.com/files/articles/85477/800x_100_w-5c08fb84abf99.jpg")
             
-            // 重複建立時，須設置 cancelKey 否則會造成因異步導致dictionary remove error問題
+            // 重複建立時，須設置否則會造成因異步導致dictionary remove error問題
+            // AppURLSession = self?.tasks.removeValue(forKey: request.key)
             req1.cancelKey = req1.path?.value
             
             sessionId1 = session.fetchData(from: req1, autoCancel: true) { result in
